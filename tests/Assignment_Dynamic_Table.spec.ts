@@ -93,7 +93,7 @@ test("Assignments Pageination_table", async({page})=>
     
 })
 
-test.only("Verify the user click on the specific check box", async({page})=>
+test("Verify the user click on the specific check box", async({page})=>
 {
     await  page.goto("https://testautomationpractice.blogspot.com/");
             const Table= page.locator("#productTable tbody");
