@@ -1,0 +1,1114 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: practice.spec.ts >> Dynamic table
+- Location: tests\practice.spec.ts:3:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('text=\'Check-in date - Check-out date\'')
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - link "Skip to main content" [ref=e5] [cursor=pointer]:
+    - /url: "#main"
+  - generic [ref=e7]:
+    - banner [ref=e19]:
+      - generic [ref=e20]:
+        - navigation [ref=e21]:
+          - link "Booking.com" [ref=e25] [cursor=pointer]:
+            - /url: https://www.booking.com/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+            - img [ref=e26]
+          - generic [ref=e28]:
+            - button "Prices in Indian Rupee" [ref=e30] [cursor=pointer]:
+              - generic [ref=e31]: INR
+            - 'button "Language: English (US)" [ref=e33] [cursor=pointer]'
+            - link "Customer support" [ref=e38] [cursor=pointer]:
+              - /url: https://secure.booking.com/help.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff&source=header&src=profile_contact_cs
+              - img [ref=e41]
+            - link "List your property" [ref=e43] [cursor=pointer]:
+              - /url: https://join.booking.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&lang=en-us&sid=6d445c4da1459b56f76f26dc7b156fff&utm_medium=frontend&utm_source=topbar
+              - generic [ref=e44]: List your property
+            - link "Register an account" [ref=e45] [cursor=pointer]:
+              - /url: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UtcBn_7e-HXTGl74IIuQS8TxYQ1OLnYc-99lFmJouAbv-D601p5TmkxDwDaHMYjCwHv5NC58I6SB6kZMucOL1uZI18tNAnjv2RNsTUjToLvCLHKd2km_njsitrOLrWdBxhjOcy3LSWG8awaukCgrb7SL5OPX0jPH6Yrv-Q4LTVuDoK00QfOm0Butb1ESJb-YII3wn2sCyhVNNdF6R_vG_9QbmqW_XsUog9QID7jq74t93TqrwJ_TQuQAmaUwNd5VXtI0ysocxmF0YiqFu8l-OOUOtezuurOmZZ8%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D
+              - generic [ref=e46]: Register
+            - link "Sign in" [ref=e48] [cursor=pointer]:
+              - /url: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&prompt=signin&state=UtcBn_7e-HXTGl74IIuQS8TxYQ1OLnYc-99lFmJouAbv-D601p5TmkxDwDaHMYjCwHv5NC58I6SB6kZMucOL1uZI18tNAnjv2RNsTUjToLvCLHKd2km_njsitrOLrWdBxhjOcy3LSWG8awaukCgrb7SL5OPX0jPH6Yrv-Q4LTVuDoK00QfOm0Butb1ESJb-YII3wn2sCyhVNNdF6R_vG_9QbmqW_XsUog9QID7jq74t93TqrwJ_TQuQAmaUwNd5VXtI0ysocxmF0YiqFu8l-OOUOtezuurOmZZ8%3D*eyJpZCI6InRyYXZlbGxlcl9oZWFkZXIifQ%3D%3D
+              - generic [ref=e49]: Sign in
+        - navigation "What are you looking for?" [ref=e50]:
+          - menubar [ref=e52]:
+            - menuitem "Stays" [ref=e53] [cursor=pointer]:
+              - generic [ref=e54]:
+                - img [ref=e56]
+                - generic [ref=e58]: Stays
+            - menuitem "Flights" [ref=e59] [cursor=pointer]:
+              - generic [ref=e60]:
+                - img [ref=e62]
+                - generic [ref=e64]: Flights
+            - menuitem "Flight + Hotel" [ref=e65] [cursor=pointer]:
+              - generic [ref=e66]:
+                - img [ref=e68]
+                - generic [ref=e70]: Flight + Hotel
+            - menuitem "Car rental" [ref=e71] [cursor=pointer]:
+              - generic [ref=e72]:
+                - img [ref=e74]
+                - generic [ref=e76]: Car rental
+            - menuitem "Attractions" [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]:
+                - img [ref=e80]
+                - generic [ref=e82]: Attractions
+            - menuitem "Airport taxis" [ref=e83] [cursor=pointer]:
+              - generic [ref=e84]:
+                - img [ref=e86]
+                - generic [ref=e88]: Airport taxis
+    - main [ref=e89]:
+      - generic [ref=e97]:
+        - generic [ref=e103]:
+          - heading "Find your next stay" [level=1] [ref=e105]:
+            - generic [ref=e106]: Find your next stay
+          - paragraph [ref=e107]: Search deals on hotels, homes, and much more...
+        - region "Search properties" [ref=e111]:
+          - generic [ref=e112]:
+            - generic [ref=e118]:
+              - img [ref=e121]
+              - combobox "Where are you going?" [ref=e123]
+            - button "Check-in date — Check-out date" [active] [ref=e126] [cursor=pointer]:
+              - generic [ref=e127]:
+                - img [ref=e129]
+                - generic [ref=e131]: Check-in date
+                - generic [ref=e132]: —
+                - generic [ref=e133]: Check-out date
+            - 'button "Number of travelers and rooms. Currently selected: 2 adults · 0 children · 1 room" [ref=e136] [cursor=pointer]':
+              - generic [ref=e137]:
+                - img [ref=e139]
+                - text: 2 adults · 0 children · 1 room
+              - img [ref=e142]
+            - button "Search" [ref=e145] [cursor=pointer]:
+              - generic [ref=e146]: Search
+          - group [ref=e147]:
+            - generic [ref=e148]:
+              - checkbox "I'm traveling for work" [ref=e149]
+              - generic [ref=e150] [cursor=pointer]:
+                - img [ref=e153]
+                - generic [ref=e156]: I'm traveling for work
+            - generic [ref=e157]:
+              - checkbox "Add flights to my search" [ref=e158]
+              - generic [ref=e159] [cursor=pointer]:
+                - img [ref=e162]
+                - generic [ref=e165]: Add flights to my search
+      - generic [ref=e170]:
+        - generic [ref=e176]:
+          - generic [ref=e178]: Why Booking.com?
+          - generic [ref=e179]:
+            - heading "Book now, pay at the property" [level=3] [ref=e181]
+            - paragraph [ref=e182]: FREE cancellation on most rooms
+          - generic [ref=e183]:
+            - heading "300M+ reviews from fellow travelers" [level=3] [ref=e185]
+            - paragraph [ref=e186]: Get trusted information from guests like you
+          - generic [ref=e187]:
+            - heading "2+ million properties worldwide" [level=3] [ref=e189]
+            - paragraph [ref=e190]: Hotels, guest houses, apartments, and more…
+          - generic [ref=e191]:
+            - heading "Trusted 24/7 customer service you can rely on" [level=3] [ref=e193]
+            - paragraph [ref=e194]: We're always here to help
+        - generic [ref=e200]:
+          - generic [ref=e201]:
+            - heading "Offers" [level=2] [ref=e202]
+            - generic [ref=e203]: Promotions, deals, and special offers for you
+          - generic [ref=e208]:
+            - generic [ref=e210]:
+              - generic [ref=e211]: Escape for less with our Getaway Deals
+              - heading "No catch. Just getaways." [level=3] [ref=e212]
+              - generic [ref=e213]: At least 15% off select stays worldwide – just book and go.
+              - link "Save on your next trip with at least 15% off select stays" [ref=e216] [cursor=pointer]:
+                - /url: https://www.booking.com/dealspage.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&campaign_id=getaway
+                - generic [ref=e217]: Save with a Getaway Deal
+            - img "A beach scene in Maui, Hawaii, with travelers walking and relaxing by the ocean on a sunny day." [ref=e221]
+        - generic [ref=e228]:
+          - generic [ref=e233]:
+            - heading "Browse by property type" [level=2] [ref=e238]
+            - generic [ref=e239]:
+              - region "Browse by property type" [ref=e240]:
+                - group [ref=e241]:
+                  - link "Hotels" [ref=e242] [cursor=pointer]:
+                    - /url: https://www.booking.com/hotel/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Hotels" [level=3] [ref=e247]
+                - group [ref=e248]:
+                  - link "Apartments" [ref=e249] [cursor=pointer]:
+                    - /url: https://www.booking.com/apartments/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Apartments" [level=3] [ref=e254]
+                - group [ref=e255]:
+                  - link "Resorts" [ref=e256] [cursor=pointer]:
+                    - /url: https://www.booking.com/resorts/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Resorts" [level=3] [ref=e261]
+                - group [ref=e262]:
+                  - link "Villas" [ref=e263] [cursor=pointer]:
+                    - /url: https://www.booking.com/villas/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Villas" [level=3] [ref=e268]
+                - group [ref=e269]:
+                  - link "Cabins" [ref=e270] [cursor=pointer]:
+                    - /url: https://www.booking.com/chalet/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Cabins" [level=3] [ref=e275]
+                - group [ref=e276]:
+                  - link "Cottages" [ref=e277] [cursor=pointer]:
+                    - /url: https://www.booking.com/cottages/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Cottages" [level=3] [ref=e282]
+                - group [ref=e283]:
+                  - link "Glamping Sites" [ref=e284] [cursor=pointer]:
+                    - /url: https://www.booking.com/glamping/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Glamping Sites" [level=3] [ref=e289]
+                - group [ref=e290]:
+                  - link "Serviced apartments" [ref=e291] [cursor=pointer]:
+                    - /url: https://www.booking.com/aparthotels/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Serviced apartments" [level=3] [ref=e296]
+                - group [ref=e297]:
+                  - link "Vacation Homes" [ref=e298] [cursor=pointer]:
+                    - /url: https://www.booking.com/holiday-homes/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Vacation Homes" [level=3] [ref=e303]
+                - group [ref=e304]:
+                  - link "Guest Houses" [ref=e305] [cursor=pointer]:
+                    - /url: https://www.booking.com/guest-house/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Guest Houses" [level=3] [ref=e310]
+                - group [ref=e311]:
+                  - link "Hostels" [ref=e312] [cursor=pointer]:
+                    - /url: https://www.booking.com/hostels/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Hostels" [level=3] [ref=e317]
+                - group [ref=e318]:
+                  - link "Motels" [ref=e319] [cursor=pointer]:
+                    - /url: https://www.booking.com/motels/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Motels" [level=3] [ref=e324]
+                - group [ref=e325]:
+                  - link "B&Bs" [ref=e326] [cursor=pointer]:
+                    - /url: https://www.booking.com/bed-and-breakfast/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "B&Bs" [level=3] [ref=e331]
+                - group [ref=e332]:
+                  - link "Ryokans" [ref=e333] [cursor=pointer]:
+                    - /url: https://www.booking.com/ryokans/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Ryokans" [level=3] [ref=e338]
+                - group [ref=e339]:
+                  - link "Riads" [ref=e340] [cursor=pointer]:
+                    - /url: https://www.booking.com/riad/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Riads" [level=3] [ref=e345]
+                - group [ref=e346]:
+                  - link "Resort Villages" [ref=e347] [cursor=pointer]:
+                    - /url: https://www.booking.com/holiday-parks/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Resort Villages" [level=3] [ref=e352]
+                - group [ref=e353]:
+                  - link "Homestays" [ref=e354] [cursor=pointer]:
+                    - /url: https://www.booking.com/homestay/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Homestays" [level=3] [ref=e359]
+                - group [ref=e360]:
+                  - link "Campgrounds" [ref=e361] [cursor=pointer]:
+                    - /url: https://www.booking.com/campings/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Campgrounds" [level=3] [ref=e366]
+                - group [ref=e367]:
+                  - link "Country Houses" [ref=e368] [cursor=pointer]:
+                    - /url: https://www.booking.com/country-houses/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Country Houses" [level=3] [ref=e373]
+                - group [ref=e374]:
+                  - link "Farm stays" [ref=e375] [cursor=pointer]:
+                    - /url: https://www.booking.com/farm-holidays/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Farm stays" [level=3] [ref=e380]
+                - group [ref=e381]:
+                  - link "Boats" [ref=e382] [cursor=pointer]:
+                    - /url: https://www.booking.com/boats/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Boats" [level=3] [ref=e387]
+                - group [ref=e388]:
+                  - link "Luxury Tents" [ref=e389] [cursor=pointer]:
+                    - /url: https://www.booking.com/camp/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Luxury Tents" [level=3] [ref=e394]
+                - group [ref=e395]:
+                  - link "Self-Catering Accommodations" [ref=e396] [cursor=pointer]:
+                    - /url: https://www.booking.com/self-catering/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Self-Catering Accommodations" [level=3] [ref=e401]
+                - group [ref=e402]:
+                  - link "Tiny Houses" [ref=e403] [cursor=pointer]:
+                    - /url: https://www.booking.com/tiny-house/index.en-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                    - heading "Tiny Houses" [level=3] [ref=e408]
+              - 'button "Next: Browse by property type" [ref=e409] [cursor=pointer]':
+                - img [ref=e412]
+          - generic [ref=e418]:
+            - generic [ref=e421]:
+              - heading "Quick and easy trip planner" [level=2] [ref=e422]
+              - generic [ref=e423]: Pick a vibe and explore the top destinations in India
+            - navigation [ref=e426]:
+              - list [ref=e428]:
+                - listitem [ref=e429]:
+                  - button "Festivals & Events" [ref=e430] [cursor=pointer]:
+                    - generic [ref=e432]: Festivals & Events
+                - listitem [ref=e433]:
+                  - button "Gastronomic Experiences" [ref=e434] [cursor=pointer]:
+                    - generic [ref=e436]: Gastronomic Experiences
+                - listitem [ref=e437]:
+                  - button "Historical Tours" [ref=e438] [cursor=pointer]:
+                    - generic [ref=e440]: Historical Tours
+                - listitem [ref=e441]:
+                  - button "Crafts & Artisans" [ref=e442] [cursor=pointer]:
+                    - generic [ref=e444]: Crafts & Artisans
+                - listitem [ref=e445]:
+                  - button "Historical Expeditions" [ref=e446] [cursor=pointer]:
+                    - generic [ref=e448]: Historical Expeditions
+                - listitem [ref=e449]:
+                  - button "Beach Trips" [ref=e450] [cursor=pointer]:
+                    - generic [ref=e452]: Beach Trips
+                - generic [ref=e454]:
+                  - text: More
+                  - img [ref=e456]
+                - listitem [ref=e458]:
+                  - button "Adventure & Exploration" [ref=e459] [cursor=pointer]:
+                    - generic [ref=e461]: Adventure & Exploration
+                - listitem [ref=e462]:
+                  - button "Photography" [ref=e463] [cursor=pointer]:
+                    - generic [ref=e465]: Photography
+            - generic [ref=e467]:
+              - region "Quick and easy trip planner" [ref=e468]:
+                - group [ref=e469]:
+                  - link "New Delhi 1,176 km away" [ref=e470] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2106102&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e474]:
+                      - heading "New Delhi" [level=3] [ref=e475]
+                      - generic [ref=e476]: 1,176 km away
+                - group [ref=e477]:
+                  - link "Bangalore 736 km away" [ref=e478] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2090174&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e482]:
+                      - heading "Bangalore" [level=3] [ref=e483]
+                      - generic [ref=e484]: 736 km away
+                - group [ref=e485]:
+                  - link "Madurai 1,060 km away" [ref=e486] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2103047&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e490]:
+                      - heading "Madurai" [level=3] [ref=e491]
+                      - generic [ref=e492]: 1,060 km away
+                - group [ref=e493]:
+                  - link "Udaipur 674 km away" [ref=e494] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2113635&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e498]:
+                      - heading "Udaipur" [level=3] [ref=e499]
+                      - generic [ref=e500]: 674 km away
+                - group [ref=e501]:
+                  - link "Chennai 915 km away" [ref=e502] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2103041&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e506]:
+                      - heading "Chennai" [level=3] [ref=e507]
+                      - generic [ref=e508]: 915 km away
+                - group [ref=e509]:
+                  - link "Hyderabad 501 km away" [ref=e510] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2097701&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e514]:
+                      - heading "Hyderabad" [level=3] [ref=e515]
+                      - generic [ref=e516]: 501 km away
+                - group [ref=e517]:
+                  - link "Mumbai 120 km away" [ref=e518] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2092174&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e522]:
+                      - heading "Mumbai" [level=3] [ref=e523]
+                      - generic [ref=e524]: 120 km away
+                - group [ref=e525]:
+                  - link "Kolkata 1,577 km away" [ref=e526] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2092511&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e530]:
+                      - heading "Kolkata" [level=3] [ref=e531]
+                      - generic [ref=e532]: 1,577 km away
+                - group [ref=e533]:
+                  - link "Ahmedabad 518 km away" [ref=e534] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2088270&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e538]:
+                      - heading "Ahmedabad" [level=3] [ref=e539]
+                      - generic [ref=e540]: 518 km away
+                - group [ref=e541]:
+                  - link "Puri 1,266 km away" [ref=e542] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2108407&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e546]:
+                      - heading "Puri" [level=3] [ref=e547]
+                      - generic [ref=e548]: 1,266 km away
+              - 'button "Next: Quick and easy trip planner" [ref=e549] [cursor=pointer]':
+                - img [ref=e552]
+          - generic [ref=e556]:
+            - heading "Trending destinations" [level=2] [ref=e559]
+            - generic [ref=e560]:
+              - link "Singapore Singapore" [ref=e561] [cursor=pointer]:
+                - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-73635&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                - generic [ref=e564]:
+                  - text: Singapore
+                  - img "Singapore" [ref=e566]
+              - link "Candolim India" [ref=e567] [cursor=pointer]:
+                - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2092526&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                - generic [ref=e570]:
+                  - text: Candolim
+                  - img "India" [ref=e572]
+            - generic [ref=e573]:
+              - link "Chennai India" [ref=e574] [cursor=pointer]:
+                - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2103041&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                - generic [ref=e577]:
+                  - text: Chennai
+                  - img "India" [ref=e579]
+              - link "Bangalore India" [ref=e580] [cursor=pointer]:
+                - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2090174&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                - generic [ref=e583]:
+                  - text: Bangalore
+                  - img "India" [ref=e585]
+              - link "Hyderabad India" [ref=e586] [cursor=pointer]:
+                - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=-2097701&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0
+                - generic [ref=e589]:
+                  - text: Hyderabad
+                  - img "India" [ref=e591]
+          - generic [ref=e596]:
+            - generic [ref=e600]:
+              - heading "Explore India" [level=2] [ref=e601]
+              - generic [ref=e602]: These popular destinations have a lot to offer
+            - generic [ref=e603]:
+              - region "Explore India" [ref=e604]:
+                - group [ref=e605]:
+                  - link "Candolim 507 properties" [ref=e606] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&checkin=2026-06-19&checkout=2026-06-20&dest_id=-2092526&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e610]:
+                      - heading "Candolim" [level=3] [ref=e611]
+                      - generic [ref=e612]: 507 properties
+                - group [ref=e613]:
+                  - link "Chennai 1,424 properties" [ref=e614] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&checkin=2026-06-19&checkout=2026-06-20&dest_id=-2103041&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e618]:
+                      - heading "Chennai" [level=3] [ref=e619]
+                      - generic [ref=e620]: 1,424 properties
+                - group [ref=e621]:
+                  - link "Bangalore 3,384 properties" [ref=e622] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&checkin=2026-06-19&checkout=2026-06-20&dest_id=-2090174&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e626]:
+                      - heading "Bangalore" [level=3] [ref=e627]
+                      - generic [ref=e628]: 3,384 properties
+                - group [ref=e629]:
+                  - link "Hyderabad 2,055 properties" [ref=e630] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&checkin=2026-06-19&checkout=2026-06-20&dest_id=-2097701&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e634]:
+                      - heading "Hyderabad" [level=3] [ref=e635]
+                      - generic [ref=e636]: 2,055 properties
+                - group [ref=e637]:
+                  - link "Ujjain 848 properties" [ref=e638] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&checkin=2026-06-19&checkout=2026-06-20&dest_id=-2113707&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e642]:
+                      - heading "Ujjain" [level=3] [ref=e643]
+                      - generic [ref=e644]: 848 properties
+                - group [ref=e645]:
+                  - link "Mumbai 1,866 properties" [ref=e646] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&checkin=2026-06-19&checkout=2026-06-20&dest_id=-2092174&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e650]:
+                      - heading "Mumbai" [level=3] [ref=e651]
+                      - generic [ref=e652]: 1,866 properties
+                - group [ref=e653]:
+                  - link "Varanasi 2,204 properties" [ref=e654] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&checkin=2026-06-19&checkout=2026-06-20&dest_id=-2114217&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e658]:
+                      - heading "Varanasi" [level=3] [ref=e659]
+                      - generic [ref=e660]: 2,204 properties
+                - group [ref=e661]:
+                  - link "Pune 1,262 properties" [ref=e662] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&checkin=2026-06-19&checkout=2026-06-20&dest_id=-2108361&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e666]:
+                      - heading "Pune" [level=3] [ref=e667]
+                      - generic [ref=e668]: 1,262 properties
+                - group [ref=e669]:
+                  - link "Mahabaleshwar 334 properties" [ref=e670] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&checkin=2026-06-19&checkout=2026-06-20&dest_id=-2103077&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e674]:
+                      - heading "Mahabaleshwar" [level=3] [ref=e675]
+                      - generic [ref=e676]: 334 properties
+                - group [ref=e677]:
+                  - link "Shirdi 195 properties" [ref=e678] [cursor=pointer]:
+                    - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&checkin=2026-06-19&checkout=2026-06-20&dest_id=-2111115&dest_type=city&group_adults=null&req_adults=null&no_rooms=null&group_children=null&req_children=null
+                    - generic [ref=e682]:
+                      - heading "Shirdi" [level=3] [ref=e683]
+                      - generic [ref=e684]: 195 properties
+              - 'button "Next: Explore India" [ref=e685] [cursor=pointer]':
+                - img [ref=e688]
+          - generic [ref=e694]:
+            - generic [ref=e696]:
+              - heading "Homes guests love" [level=2] [ref=e699]
+              - link "Discover homes" [ref=e702] [cursor=pointer]:
+                - /url: https://www.booking.com/booking-home/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                - generic [ref=e703]: Discover homes
+            - generic [ref=e704]:
+              - region "Homes guests love" [ref=e705]:
+                - group [ref=e706]:
+                  - generic [ref=e707]:
+                    - link "Leman Locke Tower Hamlets, United Kingdom, London 8.3 Very Good Starting from Price ₹ 12,504" [ref=e708] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=1920592&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1920592
+                      - generic [ref=e713]:
+                        - generic [ref=e714]:
+                          - generic [ref=e715]:
+                            - heading "Leman Locke" [level=3] [ref=e716]
+                            - generic [ref=e718]: Tower Hamlets, United Kingdom, London
+                          - generic [ref=e720]:
+                            - generic [ref=e721]: "8.3"
+                            - generic [ref=e722]: "8.3"
+                            - generic [ref=e723]: Very Good
+                            - generic [ref=e724]:
+                              - generic [ref=e725]: Very Good
+                              - generic [ref=e726]: 964 reviews
+                        - generic [ref=e729]:
+                          - generic [ref=e730]: Starting from
+                          - generic [ref=e732]: ₹ 12,504
+                          - generic [ref=e733]: Price ₹ 12,504
+                    - button "Save this item to a trip list" [ref=e738] [cursor=pointer]:
+                      - img [ref=e741]
+                - group [ref=e743]:
+                  - generic [ref=e744]:
+                    - link "Aparthotel Stare Miasto Old Town, Poland, Krakow 8.8 Excellent Starting from Price ₹ 15,746" [ref=e745] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=260295&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=260295
+                      - generic [ref=e750]:
+                        - generic [ref=e751]:
+                          - generic [ref=e752]:
+                            - heading "Aparthotel Stare Miasto" [level=3] [ref=e753]
+                            - generic [ref=e755]: Old Town, Poland, Krakow
+                          - generic [ref=e757]:
+                            - generic [ref=e758]: "8.8"
+                            - generic [ref=e759]: "8.8"
+                            - generic [ref=e760]: Excellent
+                            - generic [ref=e761]:
+                              - generic [ref=e762]: Excellent
+                              - generic [ref=e763]: 3,116 reviews
+                        - generic [ref=e766]:
+                          - generic [ref=e767]: Starting from
+                          - generic [ref=e769]: ₹ 15,746
+                          - generic [ref=e770]: Price ₹ 15,746
+                    - button "Save this item to a trip list" [ref=e775] [cursor=pointer]:
+                      - img [ref=e778]
+                - group [ref=e780]:
+                  - generic [ref=e781]:
+                    - link "NĒRO Boutique Hotel Greece, Imerovigli 9.6 Exceptional Starting from Price ₹ 49,092" [ref=e782] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=1754883&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1754883
+                      - generic [ref=e787]:
+                        - generic [ref=e788]:
+                          - generic [ref=e789]:
+                            - heading "NĒRO Boutique Hotel" [level=3] [ref=e790]
+                            - generic [ref=e792]: Greece, Imerovigli
+                          - generic [ref=e794]:
+                            - generic [ref=e795]: "9.6"
+                            - generic [ref=e796]: "9.6"
+                            - generic [ref=e797]: Exceptional
+                            - generic [ref=e798]:
+                              - generic [ref=e799]: Exceptional
+                              - generic [ref=e800]: 103 reviews
+                        - generic [ref=e803]:
+                          - generic [ref=e804]: Starting from
+                          - generic [ref=e806]: ₹ 49,092
+                          - generic [ref=e807]: Price ₹ 49,092
+                    - button "Save this item to a trip list" [ref=e812] [cursor=pointer]:
+                      - img [ref=e815]
+                - group [ref=e817]:
+                  - generic [ref=e818]:
+                    - link "7Seasons Apartments Budapest 06. Terézváros, Hungary, Budapest 8.8 Excellent Starting from Price ₹ 14,678" [ref=e819] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=78365&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=78365
+                      - generic [ref=e824]:
+                        - generic [ref=e825]:
+                          - generic [ref=e826]:
+                            - heading "7Seasons Apartments Budapest" [level=3] [ref=e827]
+                            - generic [ref=e829]: 06. Terézváros, Hungary, Budapest
+                          - generic [ref=e831]:
+                            - generic [ref=e832]: "8.8"
+                            - generic [ref=e833]: "8.8"
+                            - generic [ref=e834]: Excellent
+                            - generic [ref=e835]:
+                              - generic [ref=e836]: Excellent
+                              - generic [ref=e837]: 10,021 reviews
+                        - generic [ref=e840]:
+                          - generic [ref=e841]: Starting from
+                          - generic [ref=e843]: ₹ 14,678
+                          - generic [ref=e844]: Price ₹ 14,678
+                    - button "Save this item to a trip list" [ref=e849] [cursor=pointer]:
+                      - img [ref=e852]
+                - group [ref=e854]:
+                  - generic [ref=e855]:
+                    - link "Numa Florence Vita Santa Maria Novella, Italy, Florence 8.9 Excellent Starting from Price ₹ 21,737" [ref=e856] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=2132601&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=2132601
+                      - generic [ref=e861]:
+                        - generic [ref=e862]:
+                          - generic [ref=e863]:
+                            - heading "Numa Florence Vita" [level=3] [ref=e864]
+                            - generic [ref=e866]: Santa Maria Novella, Italy, Florence
+                          - generic [ref=e868]:
+                            - generic [ref=e869]: "8.9"
+                            - generic [ref=e870]: "8.9"
+                            - generic [ref=e871]: Excellent
+                            - generic [ref=e872]:
+                              - generic [ref=e873]: Excellent
+                              - generic [ref=e874]: 999 reviews
+                        - generic [ref=e877]:
+                          - generic [ref=e878]: Starting from
+                          - generic [ref=e880]: ₹ 21,737
+                          - generic [ref=e881]: Price ₹ 21,737
+                    - button "Save this item to a trip list" [ref=e886] [cursor=pointer]:
+                      - img [ref=e889]
+                - group [ref=e891]:
+                  - generic [ref=e892]:
+                    - link "Elegant & Stylish Apartment city center 06. Terézváros, Hungary, Budapest 9.3 Wonderful Starting from Price ₹ 12,107" [ref=e893] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=1841061&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1841061
+                      - generic [ref=e898]:
+                        - generic [ref=e899]:
+                          - generic [ref=e900]:
+                            - heading "Elegant & Stylish Apartment city center" [level=3] [ref=e901]
+                            - generic [ref=e903]: 06. Terézváros, Hungary, Budapest
+                          - generic [ref=e905]:
+                            - generic [ref=e906]: "9.3"
+                            - generic [ref=e907]: "9.3"
+                            - generic [ref=e908]: Wonderful
+                            - generic [ref=e909]:
+                              - generic [ref=e910]: Wonderful
+                              - generic [ref=e911]: 97 reviews
+                        - generic [ref=e914]:
+                          - generic [ref=e915]: Starting from
+                          - generic [ref=e917]: ₹ 12,107
+                          - generic [ref=e918]: Price ₹ 12,107
+                    - button "Save this item to a trip list" [ref=e923] [cursor=pointer]:
+                      - img [ref=e926]
+                - group [ref=e928]:
+                  - generic [ref=e929]:
+                    - link "New Sugar Loft Apartments Santa Teresa, Brazil, Rio de Janeiro 7.8 Good Starting from Price ₹ 2,989" [ref=e930] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=913677&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=913677
+                      - generic [ref=e935]:
+                        - generic [ref=e936]:
+                          - generic [ref=e937]:
+                            - heading "New Sugar Loft Apartments" [level=3] [ref=e938]
+                            - generic [ref=e940]: Santa Teresa, Brazil, Rio de Janeiro
+                          - generic [ref=e942]:
+                            - generic [ref=e943]: "7.8"
+                            - generic [ref=e944]: "7.8"
+                            - generic [ref=e945]: Good
+                            - generic [ref=e946]:
+                              - generic [ref=e947]: Good
+                              - generic [ref=e948]: 823 reviews
+                        - generic [ref=e951]:
+                          - generic [ref=e952]: Starting from
+                          - generic [ref=e954]: ₹ 2,989
+                          - generic [ref=e955]: Price ₹ 2,989
+                    - button "Save this item to a trip list" [ref=e960] [cursor=pointer]:
+                      - img [ref=e963]
+                - group [ref=e965]:
+                  - generic [ref=e966]:
+                    - link "Oriente Palace Apartments Madrid City Center, Spain, Madrid 8.9 Excellent Starting from Price ₹ 9,460" [ref=e967] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=2182677&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=2182677
+                      - generic [ref=e972]:
+                        - generic [ref=e973]:
+                          - generic [ref=e974]:
+                            - heading "Oriente Palace Apartments" [level=3] [ref=e975]
+                            - generic [ref=e977]: Madrid City Center, Spain, Madrid
+                          - generic [ref=e979]:
+                            - generic [ref=e980]: "8.9"
+                            - generic [ref=e981]: "8.9"
+                            - generic [ref=e982]: Excellent
+                            - generic [ref=e983]:
+                              - generic [ref=e984]: Excellent
+                              - generic [ref=e985]: 3,649 reviews
+                        - generic [ref=e988]:
+                          - generic [ref=e989]: Starting from
+                          - generic [ref=e991]: ₹ 9,460
+                          - generic [ref=e992]: Price ₹ 9,460
+                    - button "Save this item to a trip list" [ref=e997] [cursor=pointer]:
+                      - img [ref=e1000]
+                - group [ref=e1002]:
+                  - generic [ref=e1003]:
+                    - link "3 Epoques Apartments by Adrez Prague 1, Czech Republic, Prague 8.9 Excellent Starting from Price ₹ 10,293" [ref=e1004] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=381352&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=381352
+                      - generic [ref=e1009]:
+                        - generic [ref=e1010]:
+                          - generic [ref=e1011]:
+                            - heading "3 Epoques Apartments by Adrez" [level=3] [ref=e1012]
+                            - generic [ref=e1014]: Prague 1, Czech Republic, Prague
+                          - generic [ref=e1016]:
+                            - generic [ref=e1017]: "8.9"
+                            - generic [ref=e1018]: "8.9"
+                            - generic [ref=e1019]: Excellent
+                            - generic [ref=e1020]:
+                              - generic [ref=e1021]: Excellent
+                              - generic [ref=e1022]: 719 reviews
+                        - generic [ref=e1025]:
+                          - generic [ref=e1026]: Starting from
+                          - generic [ref=e1028]: ₹ 10,293
+                          - generic [ref=e1029]: Price ₹ 10,293
+                    - button "Save this item to a trip list" [ref=e1034] [cursor=pointer]:
+                      - img [ref=e1037]
+                - group [ref=e1039]:
+                  - generic [ref=e1040]:
+                    - link "The Apartments by The Sloane Club Kensington and Chelsea, United Kingdom, London 9.0 Wonderful Starting from Price ₹ 85,358" [ref=e1041] [cursor=pointer]:
+                      - /url: https://www.booking.com/searchresults.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&dest_id=1129506&dest_type=hotel&nflt=ht_id%3D201%3Bht_id%3D213%3Bht_id%3D219%3Bht_id%3D220%3Bht_id%3D228%3Bht_id%3D229%3Bht_id%3D230%3Bht_id%3D232%3Bht_id%3D208%3Bht_id%3D209%3Bht_id%3D210%3Bht_id%3D212%3Bht_id%3D214%3Bht_id%3D215%3Bht_id%3D216%3Bht_id%3D222%3Bht_id%3D223%3Bht_id%3D224%3Bht_id%3D227&highlighted_hotels=1129506
+                      - generic [ref=e1046]:
+                        - generic [ref=e1047]:
+                          - generic [ref=e1048]:
+                            - heading "The Apartments by The Sloane Club" [level=3] [ref=e1049]
+                            - generic [ref=e1051]: Kensington and Chelsea, United Kingdom, London
+                          - generic [ref=e1053]:
+                            - generic [ref=e1054]: "9.0"
+                            - generic [ref=e1055]: "9.0"
+                            - generic [ref=e1056]: Wonderful
+                            - generic [ref=e1057]:
+                              - generic [ref=e1058]: Wonderful
+                              - generic [ref=e1059]: 259 reviews
+                        - generic [ref=e1062]:
+                          - generic [ref=e1063]: Starting from
+                          - generic [ref=e1065]: ₹ 85,358
+                          - generic [ref=e1066]: Price ₹ 85,358
+                    - button "Save this item to a trip list" [ref=e1071] [cursor=pointer]:
+                      - img [ref=e1074]
+              - 'button "Next: Homes guests love" [ref=e1076] [cursor=pointer]':
+                - img [ref=e1079]
+          - iframe [ref=e1089]:
+            - link "Ad Discover Nepal Peaks, Peace, and Pagodas Annapurna Base Camp Sunrise in the Himalayan heart. Ancient Boudhanath Explore one of the world's largest and oldest Stupas. The Roof of the World Views of Everest, Lhotse, and the Tenzing Memorial." [ref=f4e8] [cursor=pointer]:
+              - /url: https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjstH_jLkQc6SEixlBdLpB-UgG8CNISDOCLCzaLCIb6uT1HhSAiOgaJ2GtGxHLFxc1jozpCj0G_BJL5QcFviH4VwYVZJuiwz6GNjyp42xCOM5N-HPl9xYxnfD6SCB5g6gfCsie2xZTcZp0VSbe3hfO7WaPgU10kgbawfDAFrlscq4jBHAIQK8WFKFosa_GfHHXHoahEaUyOLYepkD_j4h-Lsyn2qBTKGPsz_xHKuhEUOOml_nEb4992dohcdWJLpwZPT1IuN-nN5FVDWtBxSy6po55NqvFAm5fURx6P2GLeWtz6gtb3cwv0xNYwJETlqnUFk-jcQxJSPDD9h03KxZDj4EaP64FA3OaKZ4jTm9AzWAKmB0Mmdj2FKlDH5xO7AIqdnjfXizBzrxHl3QaN9eMGtyYsbkc8-VJVPpQWuZ9Tf4Px2i2w&sai=AMfl-YQW3xhm46zPvBvrNm4CcCCoDNh9L7LC87y-YLwcM6IqKilxALt4ZVFzbHXzBn6DRHJY_deD5VR6BcZbzaR1bJgqc4i_hCmvxJOxRUxAex5sfTVqGIUB2aBTb6QcZWrjicC3Fe_dqSigUkulqyO3zdOeeUf4_tmYvEY9V9XlGCJiOTcgUblElL1iD_QdfdpAGNFOHpeVgsnd-S4hnyHLufNUgYdW5BTiPZtTGJhU3oIgoqE2oQjHt90OffXy4itgItIE07UC7WOoaVvVLeoOrQtHH9iGZNJdI9tnMXhBxcJMpJvjE4gPVTvV7potQEEZO97e9Z6QtIIdwuR9X7QIQmJoivIU_eLdxb16byGhPxuFXy3NOiAfu23b4H1EflyVvG7j1VS9bszexXmXHY05_R6vPjCwqxh4oqPssL1DpqJT-7s&sig=Cg0ArKJSzG6wlR3xVJ4yEAE&fbs_aeid=%5Bgw_fbsaeid%5D&urlfix=1&adurl=https%3A%2F%2Fwww.booking.com%2Fbas%2Fndisplay%2Fredirect%3Fndisplay_ad_id%3Da997991b-f987-4ccf-8466-10cfbfecdd1d%26affiliate_id%3D304142%26rendered_ad_pageview_id%3D7c176ae191940072%26rendered_ad_sitetype%3DWWW%26rendered_ad_vertical%3Daccommodations%26rendered_ad_position%3DINDEX_SECONDARY%26rendered_ad_pagename%3Dindex%26url%3Dhttps%253A%252F%252Fwww.booking.com%252Fcndlp%252Fnepal-sr%252FHUsgWKY7BXNdujSCZywgW.html%253Faid%253D304142%2526label%253Dgen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB%26campaign_id%3D4024180708%26creative_id%3D138550303704%26line_item_id%3D7261230225
+              - generic [ref=f4e10]:
+                - generic [ref=f4e13]:
+                  - generic [ref=f4e15]:
+                    - generic [ref=f4e18]: Ad
+                    - generic [ref=f4e21]: Discover Nepal
+                  - generic [ref=f4e24]: Peaks, Peace, and Pagodas
+                - generic [ref=f4e25]:
+                  - generic [ref=f4e28]:
+                    - generic [ref=f4e29]: Annapurna Base Camp
+                    - generic [ref=f4e30]: Sunrise in the Himalayan heart.
+                  - generic [ref=f4e38]:
+                    - generic [ref=f4e39]: Ancient Boudhanath
+                    - generic [ref=f4e40]: Explore one of the world's largest and oldest Stupas.
+                  - generic [ref=f4e48]:
+                    - generic [ref=f4e49]: The Roof of the World
+                    - generic [ref=f4e50]: Views of Everest, Lhotse, and the Tenzing Memorial.
+        - generic [ref=e1096]:
+          - heading "Travel more, spend less" [level=2] [ref=e1098]
+          - generic [ref=e1103]:
+            - heading "Sign in, save money" [level=3] [ref=e1104]
+            - generic [ref=e1105]: Save 10% or more at participating properties – just look for the blue Genius label
+            - generic [ref=e1106]:
+              - link "Sign in" [ref=e1107] [cursor=pointer]:
+                - /url: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&state=UtcBn_7e-HXTGl74IIuQS8TxYQ1OLnYc-99lFmJouAbv-D601p5TmkxDwDaHMYjCwHv5NC58I6SB6kZMucOL1uZI18tNAnjv2RNsTUjToLvCLHKd2km_njsitrOLrWdBxhjOcy3LSWG8awaukCgrb7SL5OPX0jPH6Yrv-Q4LTVuDoK00QfOm0Butb1ESJb-YII3wn2sCyhVNNdF6R_vG_9QbmqW_XsUog9QID7jq74t93TqrwJ_TQuQAmaUwNd5VXtI0ysocxmF0YiqFu8l-OOUOtezuurOmZZ8%3D*eyJpZCI6ImluZGV4In0%3D
+                - generic [ref=e1108]: Sign in
+              - link "Register" [ref=e1109] [cursor=pointer]:
+                - /url: https://account.booking.com/auth/oauth2?client_id=vO1Kblk7xX9tUn2cpZLS&redirect_uri=https%3A%2F%2Fsecure.booking.com%2Flogin.html%3Fop%3Doauth_return&response_type=code&lang=en-us&aid=304142&bkng_action=index&state=UtcBn_7e-HXTGl74IIuQS8TxYQ1OLnYc-99lFmJouAbv-D601p5TmkxDwDaHMYjCwHv5NC58I6SB6kZMucOL1uZI18tNAnjv2RNsTUjToLvCLHKd2km_njsitrOLrWdBxhjOcy3LSWG8awaukCgrb7SL5OPX0jPH6Yrv-Q4LTVuDoK00QfOm0Butb1ESJb-YII3wn2sCyhVNNdF6R_vG_9QbmqW_XsUog9QID7jq74t93TqrwJ_TQuQAmaUwNd5VXtI0ysocxmF0YiqFu8l-OOUOtezuurOmZZ8%3D*eyJpZCI6ImluZGV4In0%3D
+                - generic [ref=e1110]: Register
+        - generic [ref=e1118]:
+          - heading "Popular with travelers from India" [level=2] [ref=e1120]
+          - navigation [ref=e1121]:
+            - tablist [ref=e1123]:
+              - tab "Domestic cities" [selected] [ref=e1124] [cursor=pointer]:
+                - generic [ref=e1126]: Domestic cities
+              - tab "International cities" [ref=e1127] [cursor=pointer]:
+                - generic [ref=e1129]: International cities
+              - tab "Regions" [ref=e1130] [cursor=pointer]:
+                - generic [ref=e1132]: Regions
+              - tab "Countries" [ref=e1133] [cursor=pointer]:
+                - generic [ref=e1135]: Countries
+              - tab "Places to stay" [ref=e1136] [cursor=pointer]:
+                - generic [ref=e1138]: Places to stay
+            - tabpanel "Domestic cities" [ref=e1140]:
+              - generic [ref=e1141]:
+                - list [ref=e1142]:
+                  - listitem [ref=e1143]:
+                    - link "Ooty hotels" [ref=e1147] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/udagamandalam.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1148]: Ooty hotels
+                  - listitem [ref=e1149]:
+                    - link "Hyderabad hotels" [ref=e1153] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/hyderabad.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1154]: Hyderabad hotels
+                  - listitem [ref=e1155]:
+                    - link "Jaipur hotels" [ref=e1159] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/jaipur.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1160]: Jaipur hotels
+                  - listitem [ref=e1161]:
+                    - link "Puri hotels" [ref=e1165] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/puri.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1166]: Puri hotels
+                  - listitem [ref=e1167]:
+                    - link "Cochin hotels" [ref=e1171] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/cochin.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1172]: Cochin hotels
+                  - listitem [ref=e1173]:
+                    - link "Munnar hotels" [ref=e1177] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/munnar.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1178]: Munnar hotels
+                  - listitem [ref=e1179]:
+                    - link "Mumbai hotels" [ref=e1183] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/bombay.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1184]: Mumbai hotels
+                  - listitem [ref=e1185]:
+                    - link "Bangalore hotels" [ref=e1189] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/bengaluru.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1190]: Bangalore hotels
+                  - listitem [ref=e1191]:
+                    - link "Udaipur hotels" [ref=e1195] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/udaipur.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1196]: Udaipur hotels
+                  - listitem [ref=e1197]:
+                    - link "Varanasi hotels" [ref=e1201] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/benares.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1202]: Varanasi hotels
+                  - listitem [ref=e1203]:
+                    - link "Srinagar hotels" [ref=e1207] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/srinagar.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1208]: Srinagar hotels
+                  - listitem [ref=e1209]:
+                    - link "Rishīkesh hotels" [ref=e1213] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/rishikesh.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1214]: Rishīkesh hotels
+                  - listitem [ref=e1215]:
+                    - link "Hampi hotels" [ref=e1219] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/hampi.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1220]: Hampi hotels
+                  - listitem [ref=e1221]:
+                    - link "Pondicherry hotels" [ref=e1225] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/pondicherry.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1226]: Pondicherry hotels
+                  - listitem [ref=e1227]:
+                    - link "Varkala hotels" [ref=e1231] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/varkkallai.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1232]: Varkala hotels
+                  - listitem [ref=e1233]:
+                    - link "Alleppey hotels" [ref=e1237] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/alleppey.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1238]: Alleppey hotels
+                  - listitem [ref=e1239]:
+                    - link "Shimla hotels" [ref=e1243] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/simla.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1244]: Shimla hotels
+                  - listitem [ref=e1245]:
+                    - link "Nainital hotels" [ref=e1249] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/naini-tal.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1250]: Nainital hotels
+                  - listitem [ref=e1251]:
+                    - link "Mangalore hotels" [ref=e1255] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/mangalore.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1256]: Mangalore hotels
+                  - listitem [ref=e1257]:
+                    - link "Lonavala hotels" [ref=e1261] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/lonavale.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1262]: Lonavala hotels
+                  - listitem [ref=e1263]:
+                    - link "Ahmedabad hotels" [ref=e1267] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/ahmedabad.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1268]: Ahmedabad hotels
+                  - listitem [ref=e1269]:
+                    - link "Ayodhya hotels" [ref=e1273] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/ayodhya.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1274]: Ayodhya hotels
+                  - listitem [ref=e1275]:
+                    - link "Kolkata hotels" [ref=e1279] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/calcutta.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1280]: Kolkata hotels
+                  - listitem [ref=e1281]:
+                    - link "Alibaug hotels" [ref=e1285] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/alibaug.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1286]: Alibaug hotels
+                  - listitem [ref=e1287]:
+                    - link "Tiruvannāmalai hotels" [ref=e1291] [cursor=pointer]:
+                      - /url: https://www.booking.com/city/in/tiruvannamalai.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                      - generic [ref=e1292]: Tiruvannāmalai hotels
+                - button "Show more" [ref=e1294] [cursor=pointer]:
+                  - img [ref=e1297]
+                  - generic [ref=e1299]: Show more
+    - contentinfo [ref=e1311]:
+      - navigation "Quick Links" [ref=e1314]:
+        - list [ref=e1315]:
+          - listitem [ref=e1316]:
+            - link "Countries" [ref=e1317] [cursor=pointer]:
+              - /url: https://www.booking.com/country.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1319]: Countries
+            - text: .
+          - listitem [ref=e1320]:
+            - link "Regions" [ref=e1321] [cursor=pointer]:
+              - /url: https://www.booking.com/region.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1323]: Regions
+            - text: .
+          - listitem [ref=e1324]:
+            - link "Cities" [ref=e1325] [cursor=pointer]:
+              - /url: https://www.booking.com/city.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1327]: Cities
+            - text: .
+          - listitem [ref=e1328]:
+            - link "Districts" [ref=e1329] [cursor=pointer]:
+              - /url: https://www.booking.com/district.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1331]: Districts
+            - text: .
+          - listitem [ref=e1332]:
+            - link "Airports" [ref=e1333] [cursor=pointer]:
+              - /url: https://www.booking.com/airport.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1335]: Airports
+            - text: .
+          - listitem [ref=e1336]:
+            - link "Hotels" [ref=e1337] [cursor=pointer]:
+              - /url: https://www.booking.com/hotel/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1339]: Hotels
+            - text: .
+          - listitem [ref=e1340]:
+            - link "Places of interest" [ref=e1341] [cursor=pointer]:
+              - /url: https://www.booking.com/landmark.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1343]: Places of interest
+            - text: .
+          - listitem [ref=e1344]:
+            - link "Vacation Homes" [ref=e1345] [cursor=pointer]:
+              - /url: https://www.booking.com/booking-home/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1347]: Vacation Homes
+            - text: .
+          - listitem [ref=e1348]:
+            - link "Apartments" [ref=e1349] [cursor=pointer]:
+              - /url: https://www.booking.com/apartments/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1351]: Apartments
+            - text: .
+          - listitem [ref=e1352]:
+            - link "Resorts" [ref=e1353] [cursor=pointer]:
+              - /url: https://www.booking.com/resorts/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1355]: Resorts
+            - text: .
+          - listitem [ref=e1356]:
+            - link "Villas" [ref=e1357] [cursor=pointer]:
+              - /url: https://www.booking.com/villas/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1359]: Villas
+            - text: .
+          - listitem [ref=e1360]:
+            - link "Hostels" [ref=e1361] [cursor=pointer]:
+              - /url: https://www.booking.com/hostels/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1363]: Hostels
+            - text: .
+          - listitem [ref=e1364]:
+            - link "B&Bs" [ref=e1365] [cursor=pointer]:
+              - /url: https://www.booking.com/bed-and-breakfast/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1367]: B&Bs
+            - text: .
+          - listitem [ref=e1368]:
+            - link "Guest Houses" [ref=e1369] [cursor=pointer]:
+              - /url: https://www.booking.com/guest-house/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1371]: Guest Houses
+            - text: .
+          - listitem [ref=e1372]:
+            - link "Unique places to stay" [ref=e1373] [cursor=pointer]:
+              - /url: https://www.booking.com/accommodations.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1375]: Unique places to stay
+            - text: .
+          - listitem [ref=e1376]:
+            - link "All destinations" [ref=e1377] [cursor=pointer]:
+              - /url: https://www.booking.com/destination.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1379]: All destinations
+            - text: .
+          - listitem [ref=e1380]:
+            - link "All flight destinations" [ref=e1381] [cursor=pointer]:
+              - /url: https://www.booking.com/flights/sitemap.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1383]: All flight destinations
+            - text: .
+          - listitem [ref=e1384]:
+            - link "All car rental locations" [ref=e1385] [cursor=pointer]:
+              - /url: https://www.booking.com/cars/sitemap.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1387]: All car rental locations
+            - text: .
+          - listitem [ref=e1388]:
+            - link "All vacation destinations" [ref=e1389] [cursor=pointer]:
+              - /url: https://www.booking.com/holidays/sitemap.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1391]: All vacation destinations
+            - text: .
+          - listitem [ref=e1392]:
+            - link "Guides" [ref=e1393] [cursor=pointer]:
+              - /url: https://www.booking.com/guides/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1395]: Guides
+            - text: .
+          - listitem [ref=e1396]:
+            - link "Discover" [ref=e1397] [cursor=pointer]:
+              - /url: https://www.booking.com/discover.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1399]: Discover
+            - text: .
+          - listitem [ref=e1400]:
+            - link "Discover monthly stays" [ref=e1401] [cursor=pointer]:
+              - /url: https://www.booking.com/extended-stays/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+              - generic [ref=e1403]: Discover monthly stays
+      - generic [ref=e1405]:
+        - generic [ref=e1406]:
+          - heading "Support" [level=3] [ref=e1408]
+          - list [ref=e1409]:
+            - listitem [ref=e1410]:
+              - link "Manage your trips" [ref=e1412] [cursor=pointer]:
+                - /url: https://secure.booking.com/content/cs.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1413]: Manage your trips
+            - listitem [ref=e1414]:
+              - link "Contact Customer Service" [ref=e1416] [cursor=pointer]:
+                - /url: https://secure.booking.com/help.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1417]: Contact Customer Service
+            - listitem [ref=e1418]:
+              - link "Safety Resource Center" [ref=e1420] [cursor=pointer]:
+                - /url: https://www.booking.com/trust_and_safety.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1421]: Safety Resource Center
+        - generic [ref=e1422]:
+          - heading "Discover" [level=3] [ref=e1424]
+          - list [ref=e1425]:
+            - listitem [ref=e1426]:
+              - link "Genius loyalty program" [ref=e1428] [cursor=pointer]:
+                - /url: https://www.booking.com/genius.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1429]: Genius loyalty program
+            - listitem [ref=e1430]:
+              - link "Seasonal and holiday deals" [ref=e1432] [cursor=pointer]:
+                - /url: https://www.booking.com/deals/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1433]: Seasonal and holiday deals
+            - listitem [ref=e1434]:
+              - link "Travel articles" [ref=e1436] [cursor=pointer]:
+                - /url: https://www.booking.com/articles.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1437]: Travel articles
+            - listitem [ref=e1438]:
+              - link "Booking.com for Business" [ref=e1440] [cursor=pointer]:
+                - /url: https://business.booking.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1441]: Booking.com for Business
+            - listitem [ref=e1442]:
+              - link "Traveller Review Awards" [ref=e1444] [cursor=pointer]:
+                - /url: https://www.booking.com/traveller-awards/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1445]: Traveller Review Awards
+            - listitem [ref=e1446]:
+              - link "Car rental" [ref=e1448] [cursor=pointer]:
+                - /url: https://www.booking.com/cars/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1449]: Car rental
+            - listitem [ref=e1450]:
+              - link "Flight finder" [ref=e1452] [cursor=pointer]:
+                - /url: https://booking.com/pxgo?lang=en-us&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&aid=304142&url=https%3A%2F%2Fbooking.kayak.com%2Fin%3Fsid%3D6d445c4da1459b56f76f26dc7b156fff%26mc%3DINR%26bdclc%3Den-us%26p%3Dfooter_link%26a%3Dbdc%252Ffooter_link&token=UmFuZG9tSVYkc2RlIyh9YaAHsRE_5bn31ax_VSbtHJatM8H88qzdv6rChzI2YPoZkvu9-cSdZ0Idj_0OThURh2xQ392-vpKwiDrVeoUtN3rVUCQNeETJUHPfehFIU3JjDdBEQQjHZKEkqGF0DlDGwpvi4gqEpqqZnK_V7yFc8t7uBiEK_-jsFD367BLCpGJ_PK8LcLc5vRUrevVa121j1WvqW9nMZINC-flVn24DXY-eIoGYNOJZavBJ_PT9a1TsMCcYP4--zTGzwTG2LvDqBfMZBQYZr_RMrXm4ye2_ODLFLt4Y1weSkCtKU43nIK8ofKmR-NHCm4Fjp9stNilMT6RvOJf5aztRPmf03_OyhKaLyFaoT1k85mHj9RPkh-k36qvaPZSmSU7CcDjvH79ix2Ev9Q4ivP4gaz5SrmwVC0JdQNZ84THZiNlUhtk0nYMvnuVrv2OmQDED22jGccEz3mipPs9rkUm90_686Dru_Klxk13i2UzvX3MrbRDcA1QXGxBrCAL2SKTJxbpuEdvapg
+                - generic [ref=e1453]: Flight finder
+            - listitem [ref=e1454]:
+              - link "Restaurant reservations" [ref=e1456] [cursor=pointer]:
+                - /url: https://www.opentable.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&ref=16087
+                - generic [ref=e1457]: Restaurant reservations
+            - listitem [ref=e1458]:
+              - link "Booking.com for Travel Agents" [ref=e1460] [cursor=pointer]:
+                - /url: https://www.booking.com/affiliate-program/v2/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff&utm_campaign=booking-footer&utm_content=travel-agents-link&utm_medium=referral&utm_source=booking.com
+                - generic [ref=e1461]: Booking.com for Travel Agents
+        - generic [ref=e1462]:
+          - heading "Terms and settings" [level=3] [ref=e1464]
+          - list [ref=e1465]:
+            - listitem [ref=e1466]:
+              - link "Privacy Notice" [ref=e1468] [cursor=pointer]:
+                - /url: https://www.booking.com/content/privacy.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1469]: Privacy Notice
+            - listitem [ref=e1470]:
+              - link "Terms of Service" [ref=e1472] [cursor=pointer]:
+                - /url: https://www.booking.com/content/terms.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1473]: Terms of Service
+            - listitem [ref=e1474]:
+              - link "Accessibility Statement" [ref=e1476] [cursor=pointer]:
+                - /url: https://www.booking.com/content/accessibility_statement.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1477]: Accessibility Statement
+            - listitem [ref=e1478]:
+              - link "Grievance officer" [ref=e1480] [cursor=pointer]:
+                - /url: https://secure.booking.com/content/complaints.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1481]: Grievance officer
+            - listitem [ref=e1482]:
+              - link "Modern Slavery Statement" [ref=e1484] [cursor=pointer]:
+                - /url: https://www.bookingholdings.com/modern-slavery-statement/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                - generic [ref=e1485]: Modern Slavery Statement
+            - listitem [ref=e1486]:
+              - link "Human Rights Statement" [ref=e1488] [cursor=pointer]:
+                - /url: https://www.bookingholdings.com/about/compliance-and-ethics/human-rights/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                - generic [ref=e1489]: Human Rights Statement
+        - generic [ref=e1490]:
+          - heading "Partners" [level=3] [ref=e1492]
+          - list [ref=e1493]:
+            - listitem [ref=e1494]:
+              - link "Extranet login" [ref=e1496] [cursor=pointer]:
+                - /url: https://admin.booking.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff&utm_campaign=login_footer_v0&utm_medium=frontend&utm_source=extranet_login_footer
+                - generic [ref=e1497]: Extranet login
+            - listitem [ref=e1498]:
+              - link "Partner help" [ref=e1500] [cursor=pointer]:
+                - /url: https://partner.booking.com/en-us?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff&utm_campaign=footer_list&utm_medium=frontend_footer&utm_source=booking.com
+                - generic [ref=e1501]: Partner help
+            - listitem [ref=e1502]:
+              - link "List your property" [ref=e1504] [cursor=pointer]:
+                - /url: https://join.booking.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&lang=en-us&sid=6d445c4da1459b56f76f26dc7b156fff&utm_medium=frontend&utm_source=footer_menu
+                - generic [ref=e1505]: List your property
+            - listitem [ref=e1506]:
+              - link "Become an affiliate" [ref=e1508] [cursor=pointer]:
+                - /url: https://www.booking.com/affiliate-program/v2/index.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff&utm_campaign=booking-footer&utm_content=become-an-affiliate-link&utm_medium=referral&utm_source=booking.com
+                - generic [ref=e1509]: Become an affiliate
+        - generic [ref=e1510]:
+          - heading "About" [level=3] [ref=e1512]
+          - list [ref=e1513]:
+            - listitem [ref=e1514]:
+              - link "About Booking.com" [ref=e1516] [cursor=pointer]:
+                - /url: https://www.booking.com/content/about.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1517]: About Booking.com
+            - listitem [ref=e1518]:
+              - link "How We Work" [ref=e1520] [cursor=pointer]:
+                - /url: https://www.booking.com/content/how_we_work.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1521]: How We Work
+            - listitem [ref=e1522]:
+              - link "Sustainability" [ref=e1524] [cursor=pointer]:
+                - /url: https://sustainability.booking.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                - generic [ref=e1525]: Sustainability
+            - listitem [ref=e1526]:
+              - link "Press center" [ref=e1528] [cursor=pointer]:
+                - /url: https://news.booking.com/en-in
+                - generic [ref=e1529]: Press center
+            - listitem [ref=e1530]:
+              - link "Careers" [ref=e1532] [cursor=pointer]:
+                - /url: https://careers.booking.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                - generic [ref=e1533]: Careers
+            - listitem [ref=e1534]:
+              - link "Investor relations" [ref=e1536] [cursor=pointer]:
+                - /url: https://www.bookingholdings.com/?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB
+                - generic [ref=e1537]: Investor relations
+            - listitem [ref=e1538]:
+              - link "Corporate contact" [ref=e1540] [cursor=pointer]:
+                - /url: https://www.booking.com/content/contact-us.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1541]: Corporate contact
+            - listitem [ref=e1542]:
+              - link "Content guidelines and reporting" [ref=e1544] [cursor=pointer]:
+                - /url: https://www.booking.com/content-moderation-policy/overview-page.html?aid=304142&label=gen173nr-10CAEoggI46AdIM1gEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AsKJu9EGwAIB0gIkODc5Yzg2MmItMGQzZC00YTcyLWE4MzMtMGRmMmVlMjAxY2My2AIB4AIB&sid=6d445c4da1459b56f76f26dc7b156fff
+                - generic [ref=e1545]: Content guidelines and reporting
+      - generic [ref=e1547]:
+        - generic [ref=e1548]:
+          - 'button "Language: English (US)" [ref=e1550] [cursor=pointer]'
+          - button "Prices in Indian Rupee" [ref=e1555] [cursor=pointer]:
+            - generic [ref=e1556]: INR
+        - separator [ref=e1557]
+        - generic [ref=e1558]:
+          - generic [ref=e1560]: Booking.com is part of Booking Holdings Inc., the world leader in online travel and related services.
+          - generic [ref=e1561]: Copyright © 1996–2026 Booking.com™. All rights reserved.
+        - generic [ref=e1562]:
+          - img "Booking.com" [ref=e1563]:
+            - img [ref=e1564]
+          - img "Priceline.com" [ref=e1566]:
+            - img [ref=e1567]
+          - img "Kayak" [ref=e1570]:
+            - img [ref=e1571]
+          - img "Agoda" [ref=e1585]:
+            - img [ref=e1586]
+          - img "OpenTable" [ref=e1594]:
+            - img [ref=e1595]
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from "@playwright/test";
+  2  | 
+  3  | test("Dynamic table", async ({ page }) => {
+  4  | 
+  5  | await page.goto("https://www.booking.com/");
+  6  | 
+  7  | try {
+  8  |     const cross=page.locator("button[aria-label='Dismiss sign-in info.']");
+  9  |  await   cross.click();
+  10 |     
+  11 | }  catch (err) 
+  12 | {
+  13 |     console.log("Could not click dismiss button:", err);
+  14 | }
+> 15 |     await page.locator("text='Check-in date - Check-out date'").click();
+     |                                                                 ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  16 | 
+  17 |     page.waitForTimeout(3000);
+  18 | });
+  19 | 
+```
